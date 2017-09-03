@@ -1264,7 +1264,7 @@ func validateAwsAlbTargetGroupName(v interface{}, k string) (ws []string, errors
 
 func validateAwsAlbTargetGroupNamePrefix(v interface{}, k string) (ws []string, errors []error) {
 	name := v.(string)
-	if len(name) > 32 {
+	if len(name) > 6 {
 		errors = append(errors, fmt.Errorf("%q (%q) cannot be longer than '6' characters", k, name))
 	}
 	return
